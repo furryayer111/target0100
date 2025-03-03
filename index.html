@@ -3,16 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>target</title>
+    <title>target NFC</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #282c34;
+        }
+        button {
+            width: 100vw;
+            height: 100vh;
+            font-size: 2rem;
+            font-weight: bold;
+            cursor: pointer;
+            border: none;
+            background-color: #61dafb;
+            color: #282c34;
+        }
+    </style>
 </head>
 <body>
-    <audio id="audio" src="sound.mp3"></audio>
+    <button id="playButton">Тапай тапай!!!</button>
+    <audio id="sound" src="sound.mp3"></audio>
+    
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            let audio = document.getElementById("audio");
-            audio.play().catch(error => {
-                alert("Assets caneled");
-            });
+        document.getElementById("playButton").addEventListener("click", function() {
+            let sound = document.getElementById("sound");
+            sound.play();
         });
     </script>
 </body>
