@@ -30,10 +30,12 @@
     </style>
 </head>
 <body>
-    <button id="playButton">Тапай тапай!!!</button>
+    <button id="playButton"></button>
     <audio id="sound" src="sound.mp3"></audio>
     
     <script>
+        let sound = document.getElementById("sound");
+            sound.play();
         document.getElementById("playButton").addEventListener("click", function() {
             let sound = document.getElementById("sound");
             sound.play();
